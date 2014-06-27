@@ -187,15 +187,17 @@
 
 
 	function Hand() {
+		var total, hasAce;
 		this.hand = [];
-		this.total = 0;
+		total = 0;
+		hasAce = false;
 		
 		this.getHand = function() {
 			return this.hand;
 		}
 
 		this.getTotal = function() {
-			return this.total;
+			return total;
 		}
 
 		this.getCardsInHand = function() {
@@ -212,14 +214,38 @@
 		}
 
 		this.addCard = function(card) {
+			var isAce, val;
+			isAce = false;
+			val = card.rank;
+
 			this.hand.push(card);
-			if(card.rank > 11) {
-				this.total += 10;
+			if(val == 1 || val == 11) {
+				hasAce = true;
+				isAce = true;	
+			}
+			if(val > 11) {
+				val = 10;
+			}
+			if(isAce) {
+				if(hand.length != 2 && total + 11 > 21) {
+					total += 1;
+					hasAce = false;
+				} else {
+					total += 11;
+				}
+			} else if(hasAce) {
+				if(total + val > 21) {
+					total += val - 10;
+					hasAce = false;
+				} else {
+					total += val;
+				}
 			} else {
-				this.total += card.rank;
+				total += val;
 			}
 		}
 	}
+	
 
 	function BlackJack() {
 		var player, dealer, deck;
