@@ -1,5 +1,3 @@
-<script>
-	
 	function Deck() {
 		var cardsUsed, queue;
 		cardsUsed = 0;
@@ -286,5 +284,3 @@
 
 	b = new BlackJack();
 	b.play();
-	
-</script>
