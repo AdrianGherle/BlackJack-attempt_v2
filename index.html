@@ -25,9 +25,9 @@
                 <h1 class="title">BlackJack-attempt</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">in</a></li>
+                        <li><a href="#">progress</a></li>
                     </ul>
                 </nav>
             </header>
@@ -35,45 +35,64 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-
                 <article>
                     <header>
-                        <h1>article header h1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                        <h2>=== Game board ===</h2>
+                        <h2>=================</h2>
                     </header>
                     <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                        <h2>DEALER</h2>
+                        <h3>Dealer cards:</h3>
+                        <ul id="dealer">
+                        </ul>
+                        <h2 id="d-total"></h2>
                     </section>
                     <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                         <h2>PLAYER</h2>
+                        <h3>Player cards:</h3>
+                        <ul id="player">
+                        </ul>
+                        <h2 id="p-total"></h2>
                     </section>
                     <footer>
-                        <h3>article footer h3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+                        <h3></h3>
+                            <button id="hit">
+                                Hit
+                            </button>
+                            <button id="stand">
+                                Stand
+                            </button>
+                            <button id="game">
+                                New Game
+                            </button>
+                            <button id="start">
+                                Start Game
+                            </button>
+                        </ul>
                     </footer>
-                </article>
-
+                </article> 
                 <aside>
-                    <h3>aside</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
-                </aside>
-
+                    <h3>Game rules</h3>
+                        <p>This is a simplified version of the original BlackJack card game. The game has only one player and a dealer.
+                        The player starts the game first by getting two cards from the deck. The player can get more cards (Hit), or stand (Stand button). Dealer needs to get a minimum of 17 points unless the player is bust in which case dealer only takes two cards and wins. To win, player needs to total more than the dealer without going over 21 (unles 22 points are made from the first two cards). At the same total the dealer wins.</p>
+                        <p>GOOD LUCK!</p>
+                </aside>        
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
+        
+
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>footer</h3>
+                <h1 id="display"></h1>
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <!-- // <script src="js/main.js"></script> -->
-        <script src="js/BalckJack.js"></script>
+        <script src="js/BlackJack.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -81,7 +100,7 @@
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
